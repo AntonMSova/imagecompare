@@ -5,33 +5,21 @@ imagecompare accepts a CSV file with two fields (image1 and image2). It parses C
 
 ### Installing
 
-Go to [antonsova.ca](https://antonsova.ca) and download a version for your OS
+Go to [antonsova.ca](https://antonsova.ca) and download a version for your OS.
 
-Run
+Then run
 
 ```
 $ sudo mkdir -p /usr/local/bin
-```
-
-then
-
-```
 $ sudo mv ~/Downloads/compare /usr/local/bin
-```
-
-set up permissions
-
-```
 $ sudo chmod 0755 /usr/local/bin/compare
 ```
 
-Finally run
+Verify that it is successfully installed
 
 ```
 $ compare -h
 ```
-
-to ensure that everything is set up properly
 
 ## Project
 
