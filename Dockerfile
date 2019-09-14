@@ -8,6 +8,7 @@ ARG VERSION
 RUN env CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /server cmd/server/main.go
 RUN env CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build  -o "/arch=amd64+os=linux" cmd/cli/main.go
 RUN env CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o "/arch=amd64+os=darwin" cmd/cli/main.go
+RUN env CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o "/arch=amd64+os=windows" cmd/cli/main.go
 
 FROM alpine
 RUN apk add --update --no-cache ca-certificates
