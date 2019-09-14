@@ -33,7 +33,7 @@ To get the project clone repo inside `$GOPATH/src/github.com`
 $ git clone  https://github.com/AntonMSova/imagecompare.git
 ```
 
-## Running the tests
+## Running tests
 
 Tests are run with `ginkgo` and `gomega`
 
