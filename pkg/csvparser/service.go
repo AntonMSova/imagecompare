@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"path/filepath"
 	"strings"
 )
 
@@ -58,6 +59,15 @@ func Read(fileName string) ([]Images, error) {
 
 // Write creates a csv file with provided data
 func Write(fileName string, data []Report) error {
+	dirName := filepath.Dir(fileName)
+	if _, err := os.Stat(dirName); os.IsNotExist(err) {
+		err = nil
+		err = os.MkdirAll(dirName, os.ModePerm)
+		if err != nil {
+			return err
+		}
+	}
+
 	file, err := os.Create(fileName)
 	if err != nil {
 		return err
