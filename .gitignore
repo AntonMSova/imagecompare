@@ -1,2 +1,3 @@
 k8s/certificate.yaml
 k8s/issuer.yaml
+.idea/
