@@ -17,5 +17,6 @@ COPY examples/ examples/
 COPY --from=0 /server /server
 COPY --from=0 /arch=amd64+os=linux /arch=amd64+os=linux
 COPY --from=0 /arch=amd64+os=darwin /arch=amd64+os=darwin
+COPY --from=0 /arch=amd64+os=windows /arch=amd64+os=windows
 
 ENTRYPOINT ["/server"]
