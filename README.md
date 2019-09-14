@@ -33,6 +33,31 @@ To get the project clone repo inside `$GOPATH/src/github.com`
 $ git clone  https://github.com/AntonMSova/imagecompare.git
 ```
 
+## Building project
+
+```
+$ go build -o compare cmd/cli/main.go
+$ go build -o server cmd/server/main.go
+```
+
+## Running
+
+Running cli
+
+```
+$ ./compare
+```
+
+Running server
+
+```
+
+$ ./server
+```
+
+Then navigate in your browser to [localhost:8080](localhost:8080)
+
+
 ## Running tests
 
 Tests are run with `ginkgo` and `gomega`
